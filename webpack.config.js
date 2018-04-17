@@ -20,8 +20,11 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style','css?sourceMap!sass?sourceMap')
+        loader: ExtractTextPlugin.extract('style', 'css?sourceMap!sass?sourceMap')
       }
-  ]
-}
+    ]
+  },
+  externals:[{
+    xmlhttprequest: '{XMLHttpRequest:XMLHttpRequest}'
+  }]
 }
